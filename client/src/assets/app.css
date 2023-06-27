@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1, h2, h3, .text-josefin-sans {
+  font-family: 'Josefin Sans', sans-serif;
+}
+.bg-image {
+  background-image: url('/src/images/wallpaper.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+.bg-galaxy {
+  background-image: url('/src/images/Galaxia.png');
+  background-attachment: fixed;
+  background-size: cover;
+}
+.nave-animation {
+  bottom: 20%;
+  animation: flying 100s linear infinite forwards;
+}
+@media (min-width: 768px) {
+  .nave-animation {
+    bottom: auto;
+  }
+}
+@keyframes flying {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(86vw);
+    opacity: 0;
+  }
+}
+
+.slide-bottom {
+	animation: slide-bottom 0.5s linear both;
+}
+.slide-top {
+	animation: slide-bottom 0.5s linear reverse both;
+}
+
+ @keyframes slide-bottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
